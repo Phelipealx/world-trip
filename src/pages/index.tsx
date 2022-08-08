@@ -2,6 +2,7 @@ import {
   Box,
   Center,
   Divider,
+  Flex,
   Grid,
   HStack,
   Image,
@@ -18,8 +19,8 @@ import "swiper/css/pagination";
 
 const Home: NextPage = () => {
   return (
-    <Center>
-      <Grid maxW="1440px">
+    <Center bg="#011b32">
+      <Grid maxW="90rem" bg="#FFFFFF">
         <Center m="1.5rem">
           <Image
             src="/icons/logo.svg"
@@ -29,25 +30,31 @@ const Home: NextPage = () => {
           />
         </Center>
 
-        <Box height="368.21px" width="1440px" mb="100px">
-          <Box
+        <Box height="368.21px" width="90rem" mb="100px">
+          <Flex
             height="335px"
             backgroundImage="/icons/background.png"
-            display="flex"
             justifyContent="space-between"
+            alignItems="center"
           >
-            <Box textAlign="start">
-              <Text color="white" fontSize="5xl">
+            <Box ml="140px" textAlign="start">
+              <Text
+                maxW="sm"
+                color="white"
+                fontSize="4xl"
+                noOfLines={[1, 2]}
+                mb="2rem"
+              >
                 5 Continentes, infinitas possibilidades.
               </Text>
-              <Text color="white">
+              <Text maxW="md" color="white" fontSize="lg" noOfLines={[1, 2]}>
                 Chegou a hora de tirar do papel a viagem que você sempre sonhou.
               </Text>
             </Box>
-            <Box boxSize="sm" mt="100px" mr="140px">
+            <Box boxSize="sm" mt="250px" mr="140px">
               <Image src="/icons/airplane.png" alt="air plane" />
             </Box>
-          </Box>
+          </Flex>
         </Box>
 
         <Center mb="100px">
@@ -75,14 +82,13 @@ const Home: NextPage = () => {
         </Center>
 
         <Box textAlign="center" justifyItems="center">
-          <Text fontSize="6xl">Vamos nessa?</Text>
-          <Text fontSize="6xl">Então escolha seu continente</Text>
+          <Text fontSize="4xl">Vamos nessa?</Text>
+          <Text fontSize="4xl">Então escolha seu continente</Text>
         </Box>
 
-        {/* <Box>
-        <Swiper
+        {/* <Swiper
           slidesPerView={1}
-          spaceBetween={30}
+          spaceBetween={1}
           loop={true}
           pagination={{
             clickable: true,
@@ -100,8 +106,7 @@ const Home: NextPage = () => {
           <SwiperSlide>Slide 7</SwiperSlide>
           <SwiperSlide>Slide 8</SwiperSlide>
           <SwiperSlide>Slide 9</SwiperSlide>
-        </Swiper>
-      </Box> */}
+        </Swiper> */}
       </Grid>
     </Center>
   );
